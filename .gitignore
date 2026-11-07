@@ -1,0 +1,44 @@
+# Local runtime, installers, games, accounts, and diagnostics are never source.
+runtime/
+.cache/
+logs/
+dist/
+.build/
+prefix/
+drive_c/
+steamapps/
+userdata/
+startup-verified.json
+gameplay-verified.json
+
+# Python and local editor files.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets and signing credentials.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+ssfn*
+loginusers.vdf
+localconfig.vdf
+config.vdf
+
+# Built/vendor archives and executables.
+*.app/
+*.exe
+*.dll
+*.dylib
+*.dmg
+*.pkg
+*.zip
+*.tar
+*.tar.xz

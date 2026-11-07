@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "files": [
+    ".gitignore",
+    ".github/workflows/ci.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "runtime-sources.json",
+    "release-files.json",
+    "Sources/LimbusLauncher.swift",
+    "scripts/backend.py",
+    "scripts/build.py",
+    "scripts/prepare_runtime.py",
+    "scripts/source_release.py",
+    "tests/test_backend.py",
+    "tests/test_build.py",
+    "tests/test_prepare_runtime.py",
+    "tests/test_source_release.py"
+  ]
+}
