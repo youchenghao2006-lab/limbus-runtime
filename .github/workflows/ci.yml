@@ -1,0 +1,29 @@
+name: Source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Check source release boundary
+        run: python3 scripts/source_release.py --check
+      - name: Build source archive
+        run: python3 scripts/source_release.py
+      - name: Build macOS launcher
+        if: runner.os == 'macOS'
+        run: python3 scripts/build.py
